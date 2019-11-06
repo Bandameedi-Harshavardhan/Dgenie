@@ -1,19 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Hello World</h1>
-{{ request.user }}
-<div class="Sign-UP">
+<br><br><br><br><br><br><br>
+<div id="myDIV">
+  <h2 style="font-family: Caveat;text-align: center;color:#494bf0;font-size: 10vmin"><b>MOODLE++</b></h2>
+</div>
+<!-- <p  style="font-family: Pacifico;text-align: center; color:#756460  ;font-size: 8vmin"><b>Welcome to my website :D</b></p>
+    <br>
+</div> -->
+
+<!-- {{ request.user }} -->
+<div class="Sign-UP" style="text-align: center;font-size: 4vmin">
     <form>
-        <h3 class="text-center">Sign Up</h3>
-        <div class="Sign-UP">
-            <input class="form-control item" type="text" name="name" id="name" placeholder="Name" required>
+        <h3 class="text-center">Log in</h3>
+        <div class="Sign-UP" >
+            <input class="form-control item" type="text" name="Username" id="Username" placeholder="Username" required style="font-size: 3vmin">
         </div>
         <div class="Sign-UP">
-            <input class="form-control item" type="password" name="Password" placeholder="Password" required>
+            <input class="form-control item" type="password" name="Password" placeholder="Password" required style="font-size: 3vmin">
         </div>
         <div class="Sign-UP">
-            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/">Submit</button>
+            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/" style="font-size: 2.5vmin">Submit</button>
         </div>
     </form>
 </div>
+
 {% endblock %}
