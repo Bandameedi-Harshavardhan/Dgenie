@@ -7,7 +7,6 @@
 
   <form method="post" enctype="multipart/form-data" action="/upload">
     {% csrf_token %}
-    <!-- {{ form.as_p }} -->
     <input type="file" name="myfile">
     <button type="submit">Upload</button>
   </form>
@@ -21,3 +20,4 @@
 <div class="Sign-UP">
             <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/" style="font-size: 2.5vmin">Add Submission</button>
 </div>
+
