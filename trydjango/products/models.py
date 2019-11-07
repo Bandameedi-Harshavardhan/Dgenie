@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Product(models.Model):
-	title		= models.TextField()
-	description = models.TextField()
-	price		= models.TextField()
+	name		= models.TextField()
+	username	= models.TextField()
+	password	= models.TextField()
+	category	= models.TextField()
