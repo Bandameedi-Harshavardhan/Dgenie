@@ -1,7 +1,7 @@
 
 {% block content %}
-<form method='POST'> {% csrf_token %}
+<form method='POST' action="{% url 'stcourse'%}"> {% csrf_token %}
 	{{ form.as_p }}
-	<input type='submit' value='Save' />
+	<input type='submit' value='Sign-In' />
 </form>
 {% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ProductForm, UserLoginForm
 from .models import Product
@@ -35,6 +35,7 @@ def login_view(request):
 		username = form.cleaned_data.get("username")
 		password = form.cleaned_data.get("password")
 		form = UserLoginForm()
+		return render(request, 'stu_home.html' , {"username": username})
 	return render(request, "products/products_validate.html", {"form":form, "title": title})
 def register_view(request):
 	return render(request, "form.html", {})
