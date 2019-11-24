@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 @csrf_exempt
 def index(request):
-	return HttpResponse("Hello, world. You're at the Products index.")
+	return render(request, "home_page.html" , {})
 @csrf_exempt
 def product_view(request):
 	context = {
@@ -23,6 +23,7 @@ def Product_Create_View(request):
 		if my_form.is_valid():
 			Product.objects.create(**my_form.cleaned_data)
 			my_form = ProductForm()
+			return redirect("home")
 	context={
 		"form" : my_form
 	}
@@ -35,7 +36,11 @@ def login_view(request):
 		username = form.cleaned_data.get("username")
 		password = form.cleaned_data.get("password")
 		form = UserLoginForm()
-		return render(request, 'stu_home.html' , {"username": username})
+		k = Product.objects.filter(username=username)
+		if k[0].category == 2:
+			return render(request, 'stu_home.html' , {"username": username})
+		else:
+			return render(request, 'prof_home.html', {"username": username})
 	return render(request, "products/products_validate.html", {"form":form, "title": title})
 def register_view(request):
 	return render(request, "form.html", {})

@@ -12,5 +12,7 @@ urlpatterns = [
 	path('upload', views.upload_file, name='UF'),
 	path('st/course', views.course_stu_view, name = 'SC'),
 	path('is/course/new', views.add_assign_view, name='AA'),
-	path('uploadassign', views.upload_assign, name='UA')
+	path('uploadassign', views.upload_assign, name='UA'),
+	path('phome', views.prof_home_view, name='phome'),
+	path('createc', views.prof_create_course, name = 'ccreate')
 ]

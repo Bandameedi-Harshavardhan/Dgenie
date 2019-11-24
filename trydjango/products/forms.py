@@ -16,7 +16,7 @@ class ProductForm(forms.Form):
 		username=self.cleaned_data.get("username")
 		if username:
 			user_qs = Product.objects.filter(username=username)
-		if user_qs.count() == 1:
+		if user_qs.count() != 0:
 			raise forms.ValidationError("User Already Exists")
 		else :
 			user=user_qs.first()
