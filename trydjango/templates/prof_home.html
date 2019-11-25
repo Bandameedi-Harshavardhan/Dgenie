@@ -8,7 +8,7 @@
       <h1 style="color: black;font-size: 6vmin;"><b>COURSES</b></h1>
       {% if course_list %}
       <ul style="color: black;font-size: 3.5vmin;list-style-type:disc;">
-        <li> hi </li>
+        <!-- <h3> Hello! Enjoy the cources :D </h3> -->
         
         {% for course in course_list %}
         <li><a href="/is/course/{{course.cid}}">{{course.cid}}</a></li>
@@ -16,4 +16,12 @@
         
       </ul>
       {% endif %}
+</div>
+<br><br><br><br>
+<div class="Sign-UP" style="margin-left: 2vmin;">
+            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/" style="font-size: 3.5vmin">
+            <a href ="http://127.0.0.1:8000/Login">
+            Log out
+        </a>
+        </button>
 </div>

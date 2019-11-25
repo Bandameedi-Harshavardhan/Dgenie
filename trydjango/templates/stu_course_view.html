@@ -5,16 +5,19 @@
       <h1 style="color: black;font-size: 6vmin;"><b>ASSIGNMENTS</b></h1>
       {% if ass_list %}
       <ul style="color: black;font-size: 3.5vmin;list-style-type:disc;">
-        <li> hi </li>
         
         {% for ass in ass_list %}
-        <li><a href="/st/course/{{ass.title}}">{{ass.title}}</a></li>
+        <li><a href="/st/assignment/{{ass.title}}">{{ass.title}}</a></li>
         {% endfor %}
         
       </ul>
       {% endif %}
 </div>
-<br><br><br>
+<br><br><br><br>
 <div class="Sign-UP" style="margin-left: 2vmin;">
-            <button class="btn btn-primary btn-block create-account" type="submit" style="font-size: 3.5vmin"><a href="">Log out</a></button>
+            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/" style="font-size: 3.5vmin">
+            <a href ="http://127.0.0.1:8000/Login">
+            Log out
+        </a>
+        </button>
 </div>

@@ -1,6 +1,6 @@
 <center>
 <br><br><br>
-<h1 style="font-size: 6vmin">Add students to {{cid}} by using a file</h1>
+<h1 style="font-size: 6vmin">Add instructors to {{cid}} by using a file</h1>
 <br><br>
 {% block content %}
   <form method="post" enctype="multipart/form-data" action="/is/add_stu/{{cid}}/">
@@ -16,11 +16,3 @@
   <p><a href="{% url 'home' %}", style="font-size: 5vmin">Return to home</a></p>
 </center>
 {% endblock %}
-<br><br><br><br>
-<div class="Sign-UP" style="margin-left: 2vmin;">
-            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/" style="font-size: 3.5vmin">
-            <a href ="http://127.0.0.1:8000/Login">
-            Log out
-        </a>
-        </button>
-</div>

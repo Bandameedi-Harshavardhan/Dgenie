@@ -1,7 +1,8 @@
 <br><br><br>
+<h1 style="text-align: center; font-size: 6vmin">COURSE :{{cid}}</h1>
 <div class="Sign-UP" style="margin-left: 2vmin;">
             <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/is/course/new" style="font-size: 3.5vmin">
-                <a href ="http://127.0.0.1:8000/is/add_stu/{{cid}}">
+                <a method="post" href ="http://127.0.0.1:8000/is/add_stu/{{cid}}">
             Add Students
         </a>
         </button>
@@ -9,7 +10,7 @@
 <br><br><br>
 <div class="Sign-UP" style="margin-left: 2vmin;">
             <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/is/course/new" style="font-size: 3.5vmin">
-                <a href ="http://127.0.0.1:8000/is/course/new">
+                <a method="post" href ="http://127.0.0.1:8000/is/add_ins/{{cid}}">
             Add Instructors
         </a>
         </button>
@@ -24,9 +25,9 @@
 </div>
 <br><br>
 <h1>Assignments Given</h1>
-<div id="assignments given">
+<div id="assignments given" style="font-size: 3vmin">
       {% for ass in ass_list %}
-      <li><a href="/is/assignment/{{a.title}}">{{ass.title}}</a></li>
+      <li><a href="/is/assignment/{{ass.title}}">{{ass.title}}</a></li>
       {% endfor %}
 </div>
 <br><br><br><br>
