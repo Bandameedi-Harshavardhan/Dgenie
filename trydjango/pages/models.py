@@ -15,7 +15,7 @@ class Product(models.Model):
                                 default=2)
 class CourseList(models.Model):
 	course_name = models.CharField(max_length=100)
-	course_id = models.CharField(max_length=100)
+	course_id = models.CharField(max_length=100,unique=True)
 	year = models.CharField(max_length=100)
 
 class Course(models.Model):

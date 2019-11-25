@@ -1,7 +1,13 @@
 
 {% block content %}
-<form method='POST'> {% csrf_token %}
+<br><br><br><br><br><br><br><br><br>
+
+<center>
+<h1>Sign-In</h1>
+<br>
+<form method='POST', style="font-size: 4vmin;width: 50vmin;height: 8vmin"> {% csrf_token %}
 	{{ form.as_p }}
 	<input type='submit' value='Sign-In' />
 </form>
+</center>
 {% endblock %}

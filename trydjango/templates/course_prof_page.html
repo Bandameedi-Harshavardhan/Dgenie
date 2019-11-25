@@ -1,24 +1,38 @@
-<br><br><br><br><br><br><br>
+<br><br><br>
 <div class="Sign-UP" style="margin-left: 2vmin;">
             <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/is/course/new" style="font-size: 3.5vmin">
-            	<a href ="http://127.0.0.1:8000/is/course/new">
+                <a href ="http://127.0.0.1:8000/is/add_stu/{{cid}}">
+            Add Students
+        </a>
+        </button>
+</div>
+<br><br><br>
+<div class="Sign-UP" style="margin-left: 2vmin;">
+            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/is/course/new" style="font-size: 3.5vmin">
+                <a href ="http://127.0.0.1:8000/is/course/new">
+            Add Instructors
+        </a>
+        </button>
+</div>
+<br><br><br>
+<div class="Sign-UP" style="margin-left: 2vmin;">
+            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/is/course/new" style="font-size: 3.5vmin">
+            	<a href ="http://127.0.0.1:8000/is/new/{{cid}}">
             New Assignment
         </a>
         </button>
 </div>
+<br><br>
+<h1>Assignments Given</h1>
 <div id="assignments given">
-      <h1 style="color: black;font-size: 6vmin;"><b> List of Assignments given</b></h1>
-      <ul style="color: black;font-size: 4vmin;list-style-type:disc;">
-        <li><b><a href ="http://127.0.0.1:8000/is/assignment"> Assignment 1</a></b></li><br>
-        <li><b><a href ="http://127.0.0.1:8000/is/assignment"> Assignment 2</a></b></li><br>
-        <li><b><a href ="http://127.0.0.1:8000/is/assignment"> Assignment 3</a></b></li><br>
-        <li><b><a href ="http://127.0.0.1:8000/is/assignment"> Assignment 4</a> </b></li><br>
-      </ul>
+      {% for ass in ass_list %}
+      <li><a href="/is/assignment/{{a.title}}">{{ass.title}}</a></li>
+      {% endfor %}
 </div>
-
+<br><br><br><br>
 <div class="Sign-UP" style="margin-left: 2vmin;">
             <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/" style="font-size: 3.5vmin">
-            <a href ="http://127.0.0.1:8000/">
+            <a href ="http://127.0.0.1:8000/Login">
             Log out
         </a>
         </button>

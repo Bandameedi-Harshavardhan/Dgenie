@@ -5,10 +5,13 @@ Students List(op)
 Course Duration(changable) -->
 
 {% block content %}
-<form method='POST'> {% csrf_token %}
+<center><br><br><br><br><br>
+  <h1>Please fill the following details to create a new course:</h1><br><br>
+<form method='POST', style="font-size: 4vmin;width: 50vmin;height: 8vmin"> {% csrf_token %}
 	{{ form.as_p }}
 	<input type='submit' value='Submit' />
 </form>
+</center>
 {% endblock %}
 <!-- <head>
 

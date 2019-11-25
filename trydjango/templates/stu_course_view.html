@@ -1,18 +1,20 @@
-
-<div id="courses taken">
-      <h1 style="color: black;font-size: 6vmin;"><b>COURSES</b></h1>
-      {% if course_list %}
+<center><br>
+<div id="assignments given">
+      <h2 style="color: black;font-size: 6vmin;"><b>COURSE: {{cid}}</b></h2>
+</center>
+      <h1 style="color: black;font-size: 6vmin;"><b>ASSIGNMENTS</b></h1>
+      {% if ass_list %}
       <ul style="color: black;font-size: 3.5vmin;list-style-type:disc;">
         <li> hi </li>
         
-        {% for course in course_list %}
-        <li><a href="/st/course/{{course.cid}}">{{course.cid}}</a></li>
+        {% for ass in ass_list %}
+        <li><a href="/st/course/{{ass.title}}">{{ass.title}}</a></li>
         {% endfor %}
         
       </ul>
       {% endif %}
 </div>
-<br><br>
+<br><br><br>
 <div class="Sign-UP" style="margin-left: 2vmin;">
             <button class="btn btn-primary btn-block create-account" type="submit" style="font-size: 3.5vmin"><a href="">Log out</a></button>
 </div>

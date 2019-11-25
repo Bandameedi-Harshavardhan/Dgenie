@@ -1,8 +1,10 @@
-
+<head>
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+</head>
 {% block content %}
-<br><br><br><br><br><br><br>
+<br>
 <div id="myDIV">
-  <h2 style="font-family: Caveat;text-align: center;color:#494bf0;font-size: 10vmin"><b>MOODLE++</b></h2>
+  <h2 style="font-family: Caveat;text-align: center;color:#494bf0;font-size: 17vmin"><b>MOODLE++</b></h2>
 </div>
 <!-- <p  style="font-family: Pacifico;text-align: center; color:#756460  ;font-size: 8vmin"><b>Welcome to my website :D</b></p>
     <br>
@@ -19,14 +21,27 @@
             <input class="form-control item" type="password" name="Password" placeholder="Password" required style="font-size: 3vmin">
         </div> -->
         <div class="Sign-UP">
-            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/Login" style="font-size: 2.5vmin"><a href ="http://127.0.0.1:8000/Login">
+            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/Login" style="font-size: 5vmin;background-color: #908907;width: 22vmin;height: 8vmin"><a href ="http://127.0.0.1:8000/Login">
             Signin</a></button>
         </div>
+        <br>
         <div class="Sign-UP">
-            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/create" style="font-size: 2.5vmin"><a href ="http://127.0.0.1:8000/create">
+            <button class="btn btn-primary btn-block create-account" type="submit" link="http://localhost:8000/create" style="font-size: 5vmin;background-color: #908907;width: 22vmin;height: 8vmin"><a href ="http://127.0.0.1:8000/create">
             Sign-Up</a></button>
         </div>
     </form>
 </div>
-
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 {% endblock %}
