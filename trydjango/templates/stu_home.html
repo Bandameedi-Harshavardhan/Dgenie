@@ -3,7 +3,6 @@
       <h1 style="color: black;font-size: 6vmin;"><b>COURSES</b></h1>
       {% if course_list %}
       <ul style="color: black;font-size: 3.5vmin;list-style-type:disc;">
-        <li> hi </li>
         
         {% for course in course_list %}
         <li><a href="/st/course/{{course.cid}}">{{course.cid}}</a></li>

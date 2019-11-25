@@ -43,7 +43,7 @@ def assignment_stu_view(request,title):
         return render(request,"stu_course_view.html",{'ass_list': k , 'cid': cid})
     else:
         ass = Assignment.objects.filter(title=ass_name)[0]
-        return render(request, "assignment_student.html", {'ass' :ass,'cid':cid})
+    return render(request, "assignment_student.html", {'ass' :ass,'cid':cid})
 @csrf_exempt
 def add_stu(request,title):
     global cid
@@ -185,26 +185,26 @@ def prof_create_course(request):
         form = CourseForm()
         return render(request, 'create_course.html', {'form': form})
 
-@csrf_exempt
-def upload_file(request):
-    global cid
-    global ass_name
-    #cid = title
-    #ass_name = name
-    if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
-        #if form.is_valid():
-        print("Thu bathuku")
-        f=request.FILES['myfile']
-        path="../../Submissions/"+f.name
-        with open(path, 'wb+') as destination:
-            for chunk in f.chunks():
-                destination.write(chunk)
-        k=Assignment.objects.filter(cid = Course.objects.filter(cid = cid)[0])
-        return render(request,"stu_course_view.html",{'ass_list': k , 'cid': cid})
-    else:
-        form = UploadFileForm()
-    return render(request, 'assignment_student.html', {'form': form})
+# @csrf_exempt
+# def upload_file(request):
+#     global cid
+#     global ass_name
+#     #cid = title
+#     #ass_name = name
+#     if request.method == 'POST':
+#         form = UploadFileForm(request.POST, request.FILES)
+#         #if form.is_valid():
+#         print("Thu bathuku")
+#         f=request.FILES['myfile']
+#         path="../../Submissions/"+f.name
+#         with open(path, 'wb+') as destination:
+#             for chunk in f.chunks():
+#                 destination.write(chunk)
+#         k=Assignment.objects.filter(cid = Course.objects.filter(cid = cid)[0])
+#         return render(request,"stu_course_view.html",{'ass_list': k , 'cid': cid})
+#     else:
+#         form = UploadFileForm()
+#     return render(request, 'assignment_student.html', {'form': form})
 
 @csrf_exempt
 def index(request):
